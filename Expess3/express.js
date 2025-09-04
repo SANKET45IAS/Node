@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+
+//Example of .env to hide data
+require('dotenv').config();
+const port = process.env.PORT||3000;
 
 // 👉 Import MongoDB connection
 const db = require("../MongoDB4/db");  // relative path (adjust if needed)
